@@ -14,4 +14,4 @@ USER www-data
 COPY templates /etc/gotpl/
 COPY init /docker-entrypoint-init.d/
 
-RUN dos2unix /etc/gotpl/* && dos2unix /docker-entrypoint-init.d/*
+RUN dos2unix /etc/gotpl/symfony.tpl > temp.tpl && dos2unix /docker-entrypoint-init.d/20-symfony-nginx.sh > temp.sh
