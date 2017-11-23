@@ -6,7 +6,7 @@ ARG DRUPAL_VER
 
 USER root
 
-RUN apk add dos2unix && \
+RUN apk add dos2unix --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ --allow-untrusted && \
     rm /etc/gotpl/default-vhost.conf.tpl
 
 USER www-data
