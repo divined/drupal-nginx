@@ -14,4 +14,4 @@ USER www-data
 COPY templates /etc/gotpl/
 COPY init /docker-entrypoint-init.d/
 
-RUN dos2unix /etc/gotpl/symfony.tpl && dos2unix /docker-entrypoint-init.d/20-symfony-nginx.sh && apt-get --purge remove -y dos2unix && rm -rf /var/lib/apt/lists/*
+RUN sudo dos2unix /etc/gotpl/* && sudo dos2unix /docker-entrypoint-init.d/* && apt-get --purge remove -y dos2unix && rm -rf /var/lib/apt/lists/*
