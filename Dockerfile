@@ -6,7 +6,7 @@ ARG DRUPAL_VER
 
 USER root
 
-RUN apt-get update && apt-get install -y dos2unix && \
+RUN apk add dos2unix && \
     rm /etc/gotpl/default-vhost.conf.tpl
 
 USER www-data
